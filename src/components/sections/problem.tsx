@@ -1,26 +1,26 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import Section from "@/components/section";
 import { Card, CardContent } from "@/components/ui/card";
-import { Brain, Shield, Zap } from "lucide-react";
+import { FileText, Users, GraduationCap } from "lucide-react";
 
 const problems = [
   {
-    title: "Data Overload",
+    title: "Document Overload",
     description:
-      "Businesses struggle to make sense of vast amounts of complex data, missing out on valuable insights that could drive growth and innovation.",
-    icon: Brain,
+      "Segregate and manage hundreds of documents into sequential timelines with relevant summaries and points of law being extracted from each file.",
+    icon: FileText,
   },
   {
-    title: "Slow Decision-Making",
+    title: "Outsourced Research",
     description:
-      "Traditional data processing methods are too slow, causing businesses to lag behind market changes and miss crucial opportunities.",
-    icon: Zap,
+      "On-demand back-office to map strategies, legal research and drafting with our trusted advocates empowered by the best AI systems.",
+    icon: GraduationCap,
   },
   {
-    title: "Data Security Concerns",
+    title: "Judicial Documentation",
     description:
-      "With increasing cyber threats, businesses worry about the safety of their sensitive information when adopting new technologies.",
-    icon: Shield,
+      "Last-mile services handling typing, translations and filing including compliance with respective court rules and norms.",
+    icon: Users,
   },
 ];
 
