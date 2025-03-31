@@ -1,4 +1,3 @@
-import { Icons } from "@/components/icons";
 import Section from "@/components/section";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -20,7 +19,6 @@ export default function CtaSection() {
             "w-full sm:w-auto text-background flex gap-2"
           )}
         >
-          <Icons.logo className="h-6 w-6" />
           Get started for free
         </Link>
       </div>

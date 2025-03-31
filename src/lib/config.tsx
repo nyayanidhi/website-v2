@@ -2,6 +2,7 @@ import { Icons } from "@/components/icons";
 import { FaTwitter } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
+import Image from 'next/image'
 
 export const BLUR_FADE_DELAY = 0.15;
 
@@ -22,7 +23,7 @@ export const siteConfig = {
       trigger: "Solutions",
       content: {
         main: {
-          icon: <Icons.logo className="h-6 w-6" />,
+          icon: <Image src="/NN.svg" alt="Nyayanidhi Logo" width={24} height={24} />,
           title: "Transform Your Legal Workflow",
           description: "From Case Analysis to Court Ready Documents In Minutes, Not Weeks",
           href: "#",

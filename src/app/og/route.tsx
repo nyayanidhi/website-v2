@@ -2,6 +2,7 @@ import { Icons } from "@/components/icons";
 import { siteConfig } from "@/lib/config";
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
+import Image from 'next/image'
 
 export const runtime = "edge";
 
@@ -40,12 +41,7 @@ export async function GET(req: NextRequest) {
             top: "125px",
           }}
         >
-          <Icons.logo
-            style={{
-              width: "64px",
-              height: "64px",
-            }}
-          />
+          <Image src="/NN.svg" alt="Nyayanidhi Logo" width={24} height={24} />
 
           <div
             style={{
