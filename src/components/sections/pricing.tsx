@@ -22,7 +22,8 @@ export default function PricingSection() {
   };
 
   return (
-    <Section title="Pricing" subtitle="Choose the plan that's right for you">
+    <Section title="Professional Solutions for Every Practice
+" subtitle="Choose the plan that matches your needs">
       <div className="flex justify-center mb-10">
         <span className="mr-2 font-semibold">Monthly</span>
         <label className="relative inline-flex items-center cursor-pointer">

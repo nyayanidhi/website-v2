@@ -24,8 +24,8 @@ const companies = [
 export default function Component() {
   return (
     <Section
-      title="Testimonial Highlight"
-      subtitle="What our customers are saying"
+      title="Testimonials"
+      subtitle="Real Impact, Real Advocates"
     >
       <Carousel>
         <div className="max-w-2xl mx-auto relative">
@@ -37,40 +37,24 @@ export default function Component() {
                     <MdOutlineFormatQuote className="text-4xl text-themeDarkGray my-4 mx-auto" />
                     <BlurFade delay={0.25} inView>
                       <h4 className="text-1xl font-semibold max-w-lg mx-auto px-10">
-                        There is a lot of exciting stuff going on in the stars
-                        above us that make astronomy so much fun. The truth is
-                        the universe is a constantly changing, moving, some
-                        would say “living” thing because you just never know
-                        what you are going to see on any given night of
-                        stargazing.
+                        "Nyayanidhi transformed how I handle cases. What used to take my entire weekend now takes a few hours. The precedent research is thorough, and the automated formatting saves countless revision cycles. Most importantly, it's given me back time for what matters - strategic case planning and client relationships."
                       </h4>
-                    </BlurFade>
-                    <BlurFade delay={0.25 * 2} inView>
-                      <div className="mt-8">
-                        <Image
-                          width={0}
-                          height={40}
-                          key={index}
-                          src={`https://cdn.magicui.design/companies/${
-                            companies[index % companies.length]
-                          }.svg`}
-                          alt={`${companies[index % companies.length]} Logo`}
-                          className="mx-auto w-auto h-[40px] grayscale opacity-30"
-                        />
-                      </div>
                     </BlurFade>
                     <div className="">
                       <BlurFade delay={0.25 * 3} inView>
-                        <h4 className="text-1xl font-semibold my-2">
-                          Leslie Alexander
+                        <h4 className="text-1xl font-semibold my-8">
+                          Advocate Rajesh Kumar
                         </h4>
                       </BlurFade>
                     </div>
                     <BlurFade delay={0.25 * 4} inView>
-                      <div className=" mb-3">
+                      <div className="mt-4 mb-3">
                         <span className="text-sm text-themeDarkGray">
-                          UI Designer
+                          Senior Partner, Kumar & Associates
                         </span>
+                        <p className="text-sm text-themeDarkGray">
+                          15+ years specializing in Property Law
+                        </p>
                       </div>
                     </BlurFade>
                   </div>
@@ -81,10 +65,10 @@ export default function Component() {
           <div className="pointer-events-none absolute inset-y-0 left-0 h-full w-2/12 bg-gradient-to-r from-background"></div>
           <div className="pointer-events-none absolute inset-y-0 right-0 h-full  w-2/12 bg-gradient-to-l from-background"></div>
         </div>
-        <div className="md:block hidden">
+        {/* <div className="md:block hidden">
           <CarouselPrevious />
           <CarouselNext />
-        </div>
+        </div> */}
       </Carousel>
     </Section>
   );
