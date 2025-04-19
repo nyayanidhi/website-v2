@@ -13,13 +13,13 @@ export default function CtaSection() {
     >
       <div className="flex flex-col w-full sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
         <Link
-          href="/signup"
+          href="mailto:nyayanidhi18@gmail.com"
           className={cn(
             buttonVariants({ variant: "default" }),
             "w-full sm:w-auto text-background flex gap-2"
           )}
         >
-          Get started for free
+          Contact Us
         </Link>
       </div>
     </Section>

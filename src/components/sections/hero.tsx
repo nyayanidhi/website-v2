@@ -20,7 +20,7 @@ function HeroPill() {
       transition={{ duration: 0.8, ease }}
     >
       <div className="w-fit rounded-full bg-accent px-2 py-0.5 text-center text-xs font-medium text-primary sm:text-sm">
-        📣 20% off
+        📣 25% off
       </div>
       <p className="text-xs font-medium text-primary sm:text-sm">
         on all cases till April 30th 2025

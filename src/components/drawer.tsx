@@ -19,7 +19,7 @@ export default function drawerDemo() {
       <DrawerTrigger>
         <IoMenuSharp className="text-2xl" />
       </DrawerTrigger>
-      <DrawerContent>
+      <DrawerContent className="ml-10">
         <DrawerHeader className="px-6">
           <div className="">
             <Link
@@ -32,15 +32,18 @@ export default function drawerDemo() {
             </Link>
           </div>
           <nav>
-            <ul className="mt-7 text-left">
+            <ul className="mt-7 text-right">
               {siteConfig.header.map((item, index) => (
                 <li key={index} className="my-3">
                   {item.trigger ? (
                     <span className="font-semibold">{item.trigger}</span>
                   ) : (
-                    <Link href={item.href || ""} className="font-semibold">
-                      {item.label}
-                    </Link>
+                    // Handle non-trigger items by checking content
+                    item.content?.main ? (
+                      <Link href={item.content.main.href} className="font-semibold">
+                        {item.content.main.title}
+                      </Link>
+                    ) : null
                   )}
                 </li>
               ))}
@@ -49,19 +52,19 @@ export default function drawerDemo() {
         </DrawerHeader>
         <DrawerFooter>
           <Link
-            href="/login"
+            href="https://app.nyayanidhi.com"
             className={buttonVariants({ variant: "outline" })}
           >
             Login
           </Link>
           <Link
-            href="/signup"
+            href="mailto:nyayanidhi18@gmail.com"
             className={cn(
               buttonVariants({ variant: "default" }),
               "w-full sm:w-auto text-background flex gap-2"
             )}
           >
-            Get Started for Free
+            Contact Us
           </Link>
         </DrawerFooter>
       </DrawerContent>

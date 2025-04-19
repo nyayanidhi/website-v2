@@ -1,7 +1,4 @@
-import { Icons } from "@/components/icons";
-import { FaTwitter } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa6";
-import { RiInstagramFill } from "react-icons/ri";
+import { FaLinkedin, FaTwitter } from "react-icons/fa";
 import Image from 'next/image'
 
 export const BLUR_FADE_DELAY = 0.15;
@@ -94,15 +91,11 @@ export const siteConfig = {
         ],
       },
     },
-    {
-      href: "/blog",
-      label: "Case Studies",
-    },
   ],
   pricing: [
     {
       name: "SOLO PRACTITIONER",
-      href: "#",
+      href: "https://app.nyayanidhi.com",
       price: "₹5,000",
       period: "case",
       features: [
@@ -114,10 +107,11 @@ export const siteConfig = {
       description: "Perfect for independent practice",
       buttonText: "Get Started",
       isPopular: false,
+      isMonthly: true,
     },
     {
       name: "CASE MANAGER",
-      href: "#",
+      href: "mailto:nyayanidhi18@gmail.com",
       price: "₹20,000",
       period: "month",
       features: [
@@ -130,10 +124,11 @@ export const siteConfig = {
       description: "End-to-End case management for growing practices",
       buttonText: "Subscribe",
       isPopular: true,
+      isMonthly: true,
     },
     {
       name: "FIRM EDITION",
-      href: "#",
+      href: "mailto:nyayanidhi18@gmail.com",
       price: "₹50,000",
       period: "month",
       features: [
@@ -147,6 +142,7 @@ export const siteConfig = {
       description: "Built for law firms & legal teams",
       buttonText: "Contact Sales",
       isPopular: false,
+      isMonthly: true,
     },
   ],
   faqs: [
@@ -193,50 +189,23 @@ export const siteConfig = {
   ],
   footer: [
     {
-      title: "Solutions",
-      links: [
-        { href: "#", text: "Case Analysis", icon: null },
-        { href: "#", text: "Legal Drafting", icon: null },
-        { href: "#", text: "Translations", icon: null },
-        { href: "#", text: "Case Management", icon: null },
-      ],
-    },
-    {
-      title: "Company",
-      links: [
-        { href: "#", text: "About Us", icon: null },
-        { href: "#", text: "Case Studies", icon: null },
-        { href: "#", text: "Blog", icon: null },
-        { href: "#", text: "Press", icon: null },
-        { href: "#", text: "Partners", icon: null },
-      ],
-    },
-    {
       title: "Resources",
       links: [
-        { href: "#", text: "Help Center", icon: null },
-        { href: "#", text: "Contact", icon: null },
-        { href: "#", text: "Support", icon: null },
-        { href: "#", text: "Legal", icon: null },
+        { href: "mailto:nyayanidhi18@gmail.com", text: "Contact", icon: null },
       ],
     },
     {
       title: "Social",
       links: [
         {
-          href: "#",
+          href: "http://twitter.com/nyayanidhi",
           text: "Twitter",
           icon: <FaTwitter />,
         },
         {
-          href: "#",
-          text: "Instagram",
-          icon: <RiInstagramFill />,
-        },
-        {
-          href: "#",
-          text: "Youtube",
-          icon: <FaYoutube />,
+          href: "https://www.linkedin.com/company/nyayanidhi/",
+          text: "LinkedIn",
+          icon: <FaLinkedin />,
         },
       ],
     },

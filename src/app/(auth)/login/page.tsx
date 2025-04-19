@@ -66,8 +66,8 @@ export default function LoginForm() {
         </div>
         <div className="mt-4 text-center text-sm">
           Don&apos;t have an account?{" "}
-          <Link href="/signup" className="underline">
-            Sign up
+          <Link href="mailto:nyayanidhi18@gmail.com" className="underline">
+            Contact Us
           </Link>
         </div>
       </CardContent>
