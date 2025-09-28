@@ -54,7 +54,7 @@ export function CyclingTypingAnimation({
   }, [displayedText, currentTextIndex, texts, isDeleting, typingSpeed, delayBetweenTexts]);
 
   return (
-    <div className={cn("inline-block", className)}>
+    <div className={cn("block text-left", className)}>
       <span>{displayedText}</span>
       <motion.span
         initial={{ opacity: 0 }}

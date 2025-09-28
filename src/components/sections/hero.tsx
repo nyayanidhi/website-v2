@@ -55,7 +55,7 @@ function HeroTitles() {
   ];
 
   return (
-    <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center justify-center space-y-8 py-20">
+    <div className="relative flex w-full max-w-6xl flex-col items-start justify-start space-y-8 py-20">
       {/* Floating badge */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -69,7 +69,7 @@ function HeroTitles() {
 
       {/* Main content with gradient background */}
       <motion.div
-        className="relative w-full text-center"
+        className="relative w-full text-left"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -78,14 +78,14 @@ function HeroTitles() {
         }}
       >
         {/* Gradient glow effect */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[200px] w-[80%] bg-gradient-to-r from-gray-300/30 via-gray-400/20 to-gray-300/30 blur-3xl" />
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 -z-10 h-[200px] w-[80%] bg-gradient-to-r from-gray-300/30 via-gray-400/20 to-gray-300/30 blur-3xl" />
         
         <div className="relative">
           {/* Main typing animation */}
-          <div className="mb-6 flex justify-center">
+          <div className="mb-6">
             <CyclingTypingAnimation
               texts={legalTexts}
-              className="text-black text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight min-h-[1.2em] text-center"
+              className="text-black text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight min-h-[1.2em]"
               typingSpeed={60}
               delayBetweenTexts={2500}
             />
@@ -99,12 +99,12 @@ function HeroTitles() {
               delay: 0.5,
               duration: 0.8,
             }}
-            className="space-y-2"
+            className="space-y-2 text-left"
           >
             <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black">
               With <span className="font-bold">Legal × Indic AI</span>
             </p>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600">
               Transform your legal practice with cutting-edge AI technology
             </p>
           </motion.div>
@@ -116,7 +116,7 @@ function HeroTitles() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.8, ease }}
-        className="flex flex-col sm:flex-row gap-4 pt-4"
+        className="flex flex-col sm:flex-row gap-4 pt-4 items-start"
       >
         <Link
           href="https://app.nyayanidhi.com"
@@ -193,7 +193,7 @@ function HeroImage() {
 
 export default function Hero2() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-start justify-start overflow-hidden">
       {/* Background pattern */}
       <DotPattern
         className={cn(
@@ -209,7 +209,7 @@ export default function Hero2() {
         <div className="absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 animate-pulse rounded-full bg-gray-200/20 blur-3xl animation-delay-4000" />
       </div>
 
-      <div className="relative z-10 flex w-full items-center justify-center px-4 sm:px-6 lg:px-8">
+      <div className="mx-16 relative z-10 w-full px-4 sm:px-6 lg:px-8 pt-32">
         <HeroTitles />
       </div>
 
