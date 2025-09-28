@@ -105,7 +105,7 @@ function HeroTitles() {
               With <span className="font-bold">Legal × Indic AI</span>
             </p>
             <p className="text-lg sm:text-xl text-gray-600">
-              Transform your legal practice with cutting-edge AI technology
+              Digital Litigation Infrastructure for Enterprises
             </p>
           </motion.div>
         </div>
