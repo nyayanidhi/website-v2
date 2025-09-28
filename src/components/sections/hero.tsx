@@ -61,7 +61,7 @@ function HeroTitles() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease }}
-        className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary"
+        className="inline-flex items-center rounded-full border border-black/20 bg-black/5 px-3 py-1 text-xs font-medium text-black"
       >
         <span className="mr-2">⚡</span>
         AI-Powered Legal Excellence
@@ -78,14 +78,14 @@ function HeroTitles() {
         }}
       >
         {/* Gradient glow effect */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[200px] w-[80%] bg-gradient-to-r from-primary/20 via-purple-500/20 to-pink-500/20 blur-3xl" />
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[200px] w-[80%] bg-gradient-to-r from-gray-300/30 via-gray-400/20 to-gray-300/30 blur-3xl" />
         
         <div className="relative">
           {/* Main typing animation */}
           <div className="mb-6 flex justify-center">
             <CyclingTypingAnimation
               texts={legalTexts}
-              className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight min-h-[1.2em] text-center"
+              className="text-black text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight min-h-[1.2em] text-center"
               typingSpeed={60}
               delayBetweenTexts={2500}
             />
@@ -101,39 +101,14 @@ function HeroTitles() {
             }}
             className="space-y-2"
           >
-            <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-foreground">
-              With <span className="bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">Legal × Indic AI</span>
+            <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black">
+              With <span className="font-bold">Legal × Indic AI</span>
             </p>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
               Transform your legal practice with cutting-edge AI technology
             </p>
           </motion.div>
         </div>
-      </motion.div>
-
-      {/* Stats or features */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.8, duration: 0.8, ease }}
-        className="flex flex-wrap justify-center gap-8 pt-8"
-      >
-        {[
-          { value: "24hr", label: "Turnaround" },
-          { value: "95%", label: "Accuracy" },
-          { value: "500+", label: "Cases Handled" },
-        ].map((stat, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1 + index * 0.1, duration: 0.5 }}
-            className="text-center"
-          >
-            <div className="text-2xl sm:text-3xl font-bold text-primary">{stat.value}</div>
-            <div className="text-sm text-muted-foreground">{stat.label}</div>
-          </motion.div>
-        ))}
       </motion.div>
 
       {/* CTA Buttons */}
@@ -147,17 +122,16 @@ function HeroTitles() {
           href="https://app.nyayanidhi.com"
           className={cn(
             buttonVariants({ variant: "default", size: "lg" }),
-            "group relative overflow-hidden px-8"
+            "px-8 bg-black text-white hover:bg-gray-800"
           )}
         >
-          <span className="relative z-10">Get Started</span>
-          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary to-purple-600 opacity-0 transition-opacity group-hover:opacity-100" />
+          Get Started
         </Link>
         <Link
           href="mailto:nyayanidhi18@gmail.com"
           className={cn(
             buttonVariants({ variant: "outline", size: "lg" }),
-            "px-8 border-primary/20 hover:border-primary/40"
+            "px-8 border-black/20 hover:border-black/40 text-black"
           )}
         >
           Schedule Demo
@@ -228,11 +202,11 @@ export default function Hero2() {
         )}
       />
       
-      {/* Animated gradient orbs */}
+      {/* Animated gradient orbs - subtle grayscale */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute left-1/4 top-1/4 h-96 w-96 animate-pulse rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute right-1/4 bottom-1/4 h-96 w-96 animate-pulse rounded-full bg-purple-500/10 blur-3xl animation-delay-2000" />
-        <div className="absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 animate-pulse rounded-full bg-pink-500/10 blur-3xl animation-delay-4000" />
+        <div className="absolute left-1/4 top-1/4 h-96 w-96 animate-pulse rounded-full bg-gray-200/20 blur-3xl" />
+        <div className="absolute right-1/4 bottom-1/4 h-96 w-96 animate-pulse rounded-full bg-gray-300/15 blur-3xl animation-delay-2000" />
+        <div className="absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 animate-pulse rounded-full bg-gray-200/20 blur-3xl animation-delay-4000" />
       </div>
 
       <div className="relative z-10 flex w-full items-center justify-center px-4 sm:px-6 lg:px-8">
