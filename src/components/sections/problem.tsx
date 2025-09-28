@@ -1,34 +1,34 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import Section from "@/components/section";
 import { Card, CardContent } from "@/components/ui/card";
-import { FileText, Users, GraduationCap } from "lucide-react";
+import { Building2, Clock, Cpu } from "lucide-react";
 
 const problems = [
   {
-    title: "Document Overload",
+    title: "Built for Enterprises",
     description:
-      "Segregate and manage hundreds of documents into sequential timelines with relevant summaries and points of law being extracted from each file.",
-    icon: FileText,
+      "Single Platform to manage legal requirements around all assets and liabilities.",
+    icon: Building2,
   },
   {
-    title: "Outsourced Research",
+    title: "Shift From Billable Hours to Billable Outcomes",
     description:
-      "On-demand back-office to map strategies, legal research and drafting with our trusted advocates empowered by the best AI systems.",
-    icon: GraduationCap,
+      "Transparent processes where our partner advocates bill fixed rates on completion of work.",
+    icon: Clock,
   },
   {
-    title: "Judicial Documentation",
+    title: "AI-native, vertically integrated",
     description:
-      "Last-mile services handling typing, translations and filing including compliance with respective court rules and norms.",
-    icon: Users,
+      "Engage specialist advocates working with AI to manage business risks.",
+    icon: Cpu,
   },
 ];
 
 export default function Component() {
   return (
     <Section
-      title="Litigation AI"
-      subtitle="Transform your workflow"
+      title="Augment General Counsels"
+      subtitle="with Litigation centric AI-Agents and specialist advocates"
     >
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
         {problems.map((problem, index) => (

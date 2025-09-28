@@ -7,6 +7,9 @@ import HeroVideoDialog from "@/components/magicui/hero-video";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { CyclingTypingAnimation } from "@/components/cycling-typing-animation";
+import DotPattern from "@/components/magicui/dot-pattern";
+import { BorderBeam } from "@/components/magicui/border-beam";
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -43,46 +46,123 @@ function HeroPill() {
 }
 
 function HeroTitles() {
+  const legalTexts = [
+    "Appeals, Writs, Petitions",
+    "Responses to Regulatory Bodies",
+    "Written Arguments",
+    "Precedent Research",
+    "Translations",
+  ];
+
   return (
-    <div className="flex w-full max-w-2xl flex-col space-y-4 overflow-hidden pt-8">
-      <motion.h1
-        className="text-center text-4xl font-medium leading-tight text-foreground sm:text-5xl md:text-6xl"
-        initial={{ filter: "blur(10px)", opacity: 0, y: 50 }}
-        animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
-        transition={{
-          duration: 1,
-          ease,
-          staggerChildren: 0.2,
-        }}
+    <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center justify-center space-y-8 py-20">
+      {/* Floating badge */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease }}
+        className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary"
       >
-        {["All-in-one", "Litigation", "Solution"].map((text, index) => (
-          <motion.span
-            key={index}
-            className="inline-block px-1 md:px-2 text-balance font-semibold"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              delay: index * 0.2,
-              ease,
-            }}
-          >
-            {text}
-          </motion.span>
-        ))}
-      </motion.h1>
-      <motion.p
-        className="mx-auto max-w-xl text-center text-lg leading-7 text-muted-foreground sm:text-xl sm:leading-9 text-balance"
+        <span className="mr-2">⚡</span>
+        AI-Powered Legal Excellence
+      </motion.div>
+
+      {/* Main content with gradient background */}
+      <motion.div
+        className="relative w-full text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.6,
           duration: 0.8,
           ease,
         }}
       >
-        Focus On Representation, Not Paperwork
-      </motion.p>
+        {/* Gradient glow effect */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[200px] w-[80%] bg-gradient-to-r from-primary/20 via-purple-500/20 to-pink-500/20 blur-3xl" />
+        
+        <div className="relative">
+          {/* Main typing animation */}
+          <div className="mb-6 flex justify-center">
+            <CyclingTypingAnimation
+              texts={legalTexts}
+              className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight min-h-[1.2em] text-center"
+              typingSpeed={60}
+              delayBetweenTexts={2500}
+            />
+          </div>
+          
+          {/* Subtitle with enhanced styling */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              delay: 0.5,
+              duration: 0.8,
+            }}
+            className="space-y-2"
+          >
+            <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-foreground">
+              With <span className="bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">Legal × Indic AI</span>
+            </p>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+              Transform your legal practice with cutting-edge AI technology
+            </p>
+          </motion.div>
+        </div>
+      </motion.div>
+
+      {/* Stats or features */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.8, duration: 0.8, ease }}
+        className="flex flex-wrap justify-center gap-8 pt-8"
+      >
+        {[
+          { value: "24hr", label: "Turnaround" },
+          { value: "95%", label: "Accuracy" },
+          { value: "500+", label: "Cases Handled" },
+        ].map((stat, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 1 + index * 0.1, duration: 0.5 }}
+            className="text-center"
+          >
+            <div className="text-2xl sm:text-3xl font-bold text-primary">{stat.value}</div>
+            <div className="text-sm text-muted-foreground">{stat.label}</div>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      {/* CTA Buttons */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.2, duration: 0.8, ease }}
+        className="flex flex-col sm:flex-row gap-4 pt-4"
+      >
+        <Link
+          href="https://app.nyayanidhi.com"
+          className={cn(
+            buttonVariants({ variant: "default", size: "lg" }),
+            "group relative overflow-hidden px-8"
+          )}
+        >
+          <span className="relative z-10">Get Started</span>
+          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary to-purple-600 opacity-0 transition-opacity group-hover:opacity-100" />
+        </Link>
+        <Link
+          href="mailto:nyayanidhi18@gmail.com"
+          className={cn(
+            buttonVariants({ variant: "outline", size: "lg" }),
+            "px-8 border-primary/20 hover:border-primary/40"
+          )}
+        >
+          Schedule Demo
+        </Link>
+      </motion.div>
     </div>
   );
 }
@@ -139,14 +219,28 @@ function HeroImage() {
 
 export default function Hero2() {
   return (
-    <section id="hero">
-      <div className="relative flex w-full flex-col items-center justify-start px-4 pt-32 sm:px-6 sm:pt-24 md:pt-32 lg:px-8">
-        <HeroPill />
-        <HeroTitles />
-        <HeroCTA />
-        {/* <HeroImage /> */}
-        {/* <div className="pointer-events-none absolute inset-x-0 -bottom-12 h-1/3 bg-gradient-to-t from-background via-background to-transparent lg:h-1/4"></div> */}
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background pattern */}
+      <DotPattern
+        className={cn(
+          "absolute inset-0 -z-20 h-full w-full",
+          "[mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]"
+        )}
+      />
+      
+      {/* Animated gradient orbs */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute left-1/4 top-1/4 h-96 w-96 animate-pulse rounded-full bg-primary/10 blur-3xl" />
+        <div className="absolute right-1/4 bottom-1/4 h-96 w-96 animate-pulse rounded-full bg-purple-500/10 blur-3xl animation-delay-2000" />
+        <div className="absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 animate-pulse rounded-full bg-pink-500/10 blur-3xl animation-delay-4000" />
       </div>
+
+      <div className="relative z-10 flex w-full items-center justify-center px-4 sm:px-6 lg:px-8">
+        <HeroTitles />
+      </div>
+
+      {/* Bottom gradient fade */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background via-background/60 to-transparent" />
     </section>
   );
 }

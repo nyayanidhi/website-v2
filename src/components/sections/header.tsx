@@ -1,7 +1,6 @@
 "use client";
 
 import Drawer from "@/components/drawer";
-import { Icons } from "@/components/icons";
 import Menu from "@/components/menu";
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/lib/config";
@@ -47,7 +46,7 @@ export default function Header() {
 
         <div className="hidden lg:block">
           <div className="flex items-center ">
-            <nav className="mr-10">
+            <nav className="mr-10 hidden">
               <Menu />
             </nav>
 
